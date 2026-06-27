@@ -1,4 +1,4 @@
-import { profile } from "./data/profile.js?v=20260627-3";
+import { profile } from "./data/profile.js?v=20260627-4";
 
 const root = document.querySelector("#app");
 
@@ -167,6 +167,37 @@ function EducationTimeline(data) {
   `;
 }
 
+function ProfessionalPathSection(data) {
+  const items = data.professionalPath.items
+    .map(
+      (item) => `
+        <article class="timeline-item reveal">
+          <div class="timeline-date">${item.date}</div>
+          <div class="timeline-content">
+            <div class="status-pill">${item.status}</div>
+            <h3>${item.title}</h3>
+            <p>${item.place}</p>
+            ${item.detail ? `<p class="timeline-detail">${item.detail}</p>` : ""}
+          </div>
+        </article>
+      `,
+    )
+    .join("");
+
+  return `
+    <section id="percurso" class="section section-tint">
+      <div class="container narrow">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experiência</p>
+          <h2>${data.professionalPath.title}</h2>
+          <p>${data.professionalPath.intro}</p>
+        </div>
+        <div class="timeline">${items}</div>
+      </div>
+    </section>
+  `;
+}
+
 function AreasSection(data) {
   const cards = data.clinicalAreas.cards
     .map(
@@ -246,6 +277,7 @@ function PublicationsSection(data) {
               <div><dt>Ano</dt><dd>${item.year}</dd></div>
               <div><dt>Área</dt><dd>${item.area}</dd></div>
               ${item.source ? `<div><dt>Fonte</dt><dd>${item.source}</dd></div>` : ""}
+              ${item.doi ? `<div><dt>DOI</dt><dd>${item.doi}</dd></div>` : ""}
             </dl>
           </div>
           ${
@@ -381,6 +413,7 @@ function App(data) {
       ${AboutSection(data)}
       ${EndocrinologySection(data)}
       ${EducationTimeline(data)}
+      ${ProfessionalPathSection(data)}
       ${AreasSection(data)}
       ${ClinicalActivitySection(data)}
       ${PublicationsSection(data)}

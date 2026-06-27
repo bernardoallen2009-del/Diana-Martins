@@ -26,6 +26,7 @@ export const profile = {
   },
   navigation: [
     { label: "Sobre", href: "#sobre" },
+    { label: "Percurso", href: "#percurso" },
     { label: "Endocrinologia", href: "#endocrinologia" },
     { label: "Áreas", href: "#areas" },
     { label: "Publicações", href: "#publicacoes" },
@@ -56,6 +57,10 @@ export const profile = {
       {
         label: "Cargo destacado",
         value: "Coordenadora da Unidade do Lipedema, Hospital CUF Descobertas",
+      },
+      {
+        label: "Competência",
+        value: "Nutrição Clínica - Ordem dos Médicos",
       },
     ],
   },
@@ -101,32 +106,77 @@ export const profile = {
   education: {
     title: "Formação académica",
     intro:
-      "Percurso académico e diferenciação clínica a validar antes de publicação final.",
-    // VALIDAR: não publicar formação académica, anos, sociedades científicas ou diferenciação sem confirmação da Dra. Diana Cruz Martins.
+      "Formação médica e percurso académico, com base em informação profissional fornecida.",
+    // VALIDAR: confirmar designação oficial do programa de doutoramento antes de publicação final.
     items: [
       {
-        date: "[INSERIR ANOS]",
+        date: "jan. 2005 - jun. 2011",
         title: "Mestrado Integrado em Medicina",
         place: "Faculdade de Medicina da Universidade de Coimbra",
-        status: "A validar",
+        status: "Medicina",
       },
       {
-        date: "[INSERIR ANOS]",
-        title: "Especialização em Endocrinologia",
-        place: "[INSERIR INSTITUIÇÃO / SERVIÇO]",
-        status: "A validar",
+        date: "jan. 2018 - presente",
+        title: "Programa de Doutoramento",
+        place: "Faculdade de Medicina da Universidade de Coimbra - Health Professions and Related Programs",
+        status: "Doutoramento",
+      },
+    ],
+  },
+  professionalPath: {
+    title: "Percurso clínico",
+    intro:
+      "Experiência assistencial e diferenciação clínica indicada nos canais profissionais da Dra. Diana Cruz Martins.",
+    // VALIDAR: confirmar datas, instituições e designações profissionais finais antes de publicar.
+    items: [
+      {
+        date: "jan. 2025 - presente",
+        title: "Medical Doctor - Endocrinology and Nutrition Specialist",
+        place: "CUF - Hospitais e Clínicas, Lisboa e Região",
+        status: "Atual",
+        detail: "Competência em Nutrição Clínica pela Ordem dos Médicos.",
       },
       {
-        date: "[INSERIR]",
-        title: "Diferenciação clínica e investigação",
-        place: "[INSERIR DOUTORAMENTO / ÁREAS DE INVESTIGAÇÃO, SE CONFIRMADO]",
-        status: "A validar",
+        date: "fev. 2022 - jan. 2025",
+        title: "Medical Doctor - Endocrinology Specialist",
+        place: "Hospital da Luz, Lisboa",
+        status: "Endocrinologia",
       },
       {
-        date: "[INSERIR]",
-        title: "Formação contínua",
-        place: "[INSERIR CURSOS, CONGRESSOS E SOCIEDADES CIENTÍFICAS]",
-        status: "A validar",
+        date: "set. 2021 - jan. 2025",
+        title: "Medical Doctor - Endocrinology Specialist",
+        place: "Centro Hospitalar Universitário de Lisboa Central, Lisboa",
+        status: "Endocrinologia",
+      },
+      {
+        date: "mar. 2019 - set. 2021",
+        title: "Medical Doctor - Endocrinology Specialist",
+        place: "Hospital da Luz, Coimbra",
+        status: "Endocrinologia",
+      },
+      {
+        date: "nov. 2018 - jun. 2021",
+        title: "Medical Doctor - Endocrinology Specialist",
+        place: "Centro Hospitalar de Leiria, EPE",
+        status: "Endocrinologia",
+      },
+      {
+        date: "jan. 2013 - out. 2018",
+        title: "Medical Doctor - Endocrine Fellow",
+        place: "Centro Hospitalar e Universitário de Coimbra (CHUC)",
+        status: "Internato",
+      },
+      {
+        date: "jan. 2012 - dez. 2012",
+        title: "Medical Doctor - General Internship",
+        place: "Centro Hospitalar e Universitário de Coimbra (CHUC), Coimbra",
+        status: "Internato geral",
+      },
+      {
+        date: "set. 2016 - dez. 2016",
+        title: "Resident in Neuroendocrine Tumors and Thyroid Oncology",
+        place: "IEO European Institute of Oncology, Milão, Itália",
+        status: "Diferenciação",
       },
     ],
   },
@@ -230,33 +280,42 @@ export const profile = {
       { label: "Tudo", value: "all" },
       { label: "Artigos", value: "artigo" },
       { label: "Casos clínicos", value: "caso" },
+      { label: "Comunicações", value: "comunicacao" },
       { label: "Divulgação", value: "divulgacao" },
     ],
     items: [
       {
-        title: "Metformin in SARS-CoV-2 infection: A hidden path",
-        authors: "Ana Realista Pedrosa, Diana Cruz Martins, Manfredi Rizzo, José Silva-Nunes",
+        title:
+          "Metformin in SARS-CoV-2 infection: A hidden path - from altered inflammation to reduced mortality. A review from the literature",
+        authors: "Pedrosa AR; Martins DC; Rizzo M; Silva-Nunes J",
         year: "2023",
         area: "Diabetes, metabolismo, COVID-19",
         type: "artigo",
-        link: "",
+        source: "Journal of Diabetes and Its Complications",
+        doi: "10.1016/j.jdiacomp.2022.108391",
+        link: "https://pubmed.ncbi.nlm.nih.gov/36621213/",
       },
       {
         title: "Mauriac syndrome: a rare complication in patients with type 1 diabetes mellitus",
         authors:
-          "João Oliveira Torres, Diana Cruz Martins, Alexandra Abegão Matias, Nuno Gião, Eduardo Dutra, Rui [completar], José Silva-Nunes",
+          "Torres JO; Martins DC; Matias AA; Gião N; Dutra E; Malheiro R; Mendes M; Silva-Nunes J",
         year: "2025",
         area: "Diabetes tipo 1, hepatopatia glicogénica",
         type: "caso",
-        link: "",
+        source: "Endocrinology, Diabetes & Metabolism Case Reports",
+        doi: "10.1530/EDM-25-0035",
+        link: "https://pubmed.ncbi.nlm.nih.gov/40757798/",
       },
       {
-        title: "Transient Thyrotoxicosis with Immune Checkpoint Inhibitors",
-        authors: "Diana Cruz Martins e colaboradores",
+        title:
+          "SAT-491 Transient Thyrotoxicosis with Immune Checkpoint Inhibitors Therapy: The Importance of Endocrine Evaluation",
+        authors: "Diana Cruz Martins; Daniela Guelho; Nuno Vicente; Mara Ventura; Alexandra Vieira",
         year: "2020",
         area: "Tiroide, imunoterapia, endocrinologia oncológica",
-        type: "artigo",
-        link: "",
+        type: "comunicacao",
+        source: "Journal of the Endocrine Society",
+        doi: "10.1210/jendso/bvaa046.1124",
+        link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7207389/",
       },
       {
         title: "Ritmo circadiano e hormonas - a visão da Endocrinologia",
@@ -264,8 +323,8 @@ export const profile = {
         year: "2023",
         area: "Ritmo circadiano, hormonas, metabolismo",
         type: "divulgacao",
-        source: "SPEDM Newsletter",
-        link: "",
+        source: "Newsletter da SPEDM, abril 2023",
+        link: "https://www.spedm.pt/pt/newsletter-da-spedm/tema-de-capa--diana-cruz-martins",
       },
     ],
   },
